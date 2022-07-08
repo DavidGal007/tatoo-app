@@ -1,0 +1,104 @@
+@import './vars.scss';
+.form {
+   height: auto;
+   margin-top: 90px;
+   margin-bottom: 2em;
+    &__about-us {
+        display: flex;
+        column-gap: 25px;
+        align-items: center;
+        @media(max-width: $md2+px) {
+            display: block;
+        }
+    }
+    &__title {
+        font-family: $font-family__sans;
+        font-weight: 400;
+        font-size: 45px;
+        color: #fff;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    &-btn {
+        font-size: 1.7rem;
+        font-weight: 600;
+        color: $dark;
+        margin-top: 2em;
+        transition: .2s;
+        &:hover {
+            background-color: $yellow;
+        }
+    }
+    &__block {
+        flex: 0 1 45%;
+        padding: 1.8rem;
+        background-color: rgba(0, 0, 0, 0.255);
+        
+    }
+    
+}
+.about {
+    flex: 0 1 55%;
+    text-align: center;
+    padding: 1em;
+    
+    &-phone {
+        color: #fff;
+        @include adaptive-value("font-size", 28, 22, 17);
+        letter-spacing: .2rem;
+        font-weight: 300;
+        margin-bottom: 1.5rem;
+    }
+    &-days {
+        margin-bottom: 1.3em;
+    }
+    &-list {
+        color: #B8B8B8;
+        font-weight: 400;
+        font-size: 1.2rem;
+        font-style: italic;
+        line-height: $line-height--computed;
+     }
+     &-title {
+         font-size: 2rem;
+         color: #fff;
+         font-weight: 500;
+         margin-bottom: 1.8rem;
+    }
+    &-desc {
+        font-weight: 400;
+        font-size: 19px;
+        color: $line;
+        line-height: $line-height--small;
+        
+    }
+}
+
+.form-item label {
+    display: block;
+    color: #fff;
+    font-size: $font-size--normal;
+    font-weight: 400;
+    margin: 50px 0 13px 0;
+    
+}
+
+.form-textfield {
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    padding: 0 0 .8rem 2px;
+    border-bottom: 1px solid #fff;
+    font-size: 1.2rem;
+    height: 40px;
+    color: rgba(255, 255, 255, 0.782);
+    &::placeholder {
+        color: gray;
+    }
+}
+.wp-wrapper {
+    position: fixed;
+    bottom:3%;
+    cursor: pointer;
+	right: 3%;
+}

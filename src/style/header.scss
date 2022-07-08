@@ -1,0 +1,321 @@
+@import "./vars.scss";
+.header {
+  width: 100%;
+  margin: 0 auto;
+  z-index: 5;
+  position: fixed;
+  top: 0px;
+  background-color: $dark;
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    height: 65px;
+  }
+  &__lists {
+    display: flex;
+    align-items: center;
+    transition: all 500ms ease;
+    @media (max-width: $md2+px) {
+      transform: translateY(-100%);
+      display: block;
+      position: fixed;
+      padding: 60px 40px 8px;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgb(46 45 51 / 96%);
+    }
+  }
+  &__list {
+    margin-right: 3em;
+    &:last-child {
+      margin-right: 0;
+    }
+    @media (max-width: $md2+px) {
+       margin: 0 !important;
+       padding: 1em 0;
+       border-top: 1px solid gray;
+       text-align: center;
+    }
+  }
+  &__link {
+    color: $title;
+    text-transform: capitalize;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.1rem;
+    &:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: $md2+px) {
+      font-size: 1.3rem;
+      color: #f5f5f7;
+      opacity: .8;
+      &:hover {
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  }
+  &__menu {
+    display: none;
+    @media (max-width: $md2+px) {
+      display: block;
+    }
+  }
+}
+.contact {
+  display: flex;
+  align-items: center;
+  column-gap: 2em;
+  @media (max-width: $md3+px) {
+    display: none;
+  }
+  &__tel {
+    color: $title;
+    font-weight: 500;
+    padding-left: 30px;
+    position: relative;
+    font-size: 1.2rem;
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url("../assets/phone.svg");
+      background-repeat: no-repeat;
+      top: 0;
+      left: 0;
+      transform: translateY(-3px);
+      background-size: cover;
+      width: 20px;
+      height: 20px;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &__insta {
+    width: 30px;
+  }
+  &__facebook {
+    width: 26px;
+  }
+}
+
+.hero {
+  margin-bottom: 10px;
+  width: 100%;
+  height: 100vh;
+
+  &__wrapper {
+    background-image: url("../assets/bg5.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+  }
+  &__inner {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+  }
+  &__content {
+    margin-left: 3em;
+    background-color: #ffffff2f;
+    flex: 0 1 50%;
+    @include adaptive-value("padding", 48, 32, 16);
+    @media (max-width: $md2+px) {
+      flex: 0 1 75%;
+    }
+    @media (max-width: $md3+px) {
+      flex: 0 1 100%;
+      margin-left: 0;
+    }
+  }
+  &__title {
+    font-style: normal;
+    font-family: $font-family__sans;
+    font-weight: 700;
+    @include adaptive-value("font-size", 54, 34, 10);
+    line-height: $line-height-responsive;
+    color: #ffffff;
+
+    opacity: 0.87;
+  }
+  &__description {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: #b8b8b8;
+  }
+  &__btn {
+    margin-top: 1.5em;
+    color: #2e2d33;
+    background-color: $yellow;
+    font-weight: 500;
+    font-size: 17px;
+  }
+  &__information {
+    margin-top: 1.5em;
+  }
+}
+.subinfo {
+  margin-bottom: 1em;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &__title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
+    color: #ffffff;
+    font-family: $font-family__sans;
+  }
+  &__pfs {
+    font-weight: 400;
+    font-size: 16px;
+    color: #ffffff;
+    opacity: 0.6;
+  }
+}
+
+.services {
+  &__wrapper {
+    margin: 70px 0 120px 0;
+  }
+  &__title {
+    font-weight: 700;
+    @include adaptive-value("font-size", 42, 28, 10);
+    margin-bottom: 2.8rem;
+    color: #ffffff;
+    opacity: 0.87;
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    @media (max-width: $md3+px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  &__article {
+    width: 356px;
+    height: 250px;
+    background-color: #333;
+    outline: 2px solid grey;
+    outline-offset: -8px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    @media (max-width: $md3+px) {
+      margin-bottom: 30px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+    transition: transform 0.75s;
+    &:hover {
+      transform: scale(1.15);
+    }
+  }
+  @media (max-width: $md3+px) {
+    &__article:nth-child(3) {
+      justify-self: center;
+    }
+  }
+}
+
+.services__psf {
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  font-weight: 500;
+  color: $yellow;
+  font-size: 20px;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+}
+.gallery {
+  &__item {
+    height: 240px;
+    overflow: hidden;
+  }
+}
+.gallery__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gallery__img {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 5px;
+}
+
+/* Media Query for changing grid on bigger screens*/
+
+/* Bigger than Phones(tablet) */
+@media only screen and (min-width: 750px) {
+  .gallery__img {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Bigger than Phones(laptop / desktop) */
+@media only screen and (min-width: 970px) {
+  .gallery__img {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.btn15 {
+  .icon {
+    @include icon(4px, 30px);
+    border-radius: 4px;
+
+    &:before {
+      @include icon-before(4px, 30px, -10px);
+      border-radius: 4px;
+    }
+
+    &:after {
+      @include icon-after(4px, 30px, 10px);
+      border-radius: 4px;
+    }
+  }
+
+  &.open {
+    .icon {
+      transition-duration: 0.5s;
+      background: transparent;
+
+      &:before {
+        transform: rotateZ(45deg) scaleX(1.25) translate(6.5px, 6.5px);
+      }
+
+      &:after {
+        transform: rotateZ(-45deg) scaleX(1.25) translate(6px, -6px);
+      }
+    }
+  }
+  &:hover {
+    background: #000;
+    cursor: pointer;
+  }
+}
+.trans {
+  transform: translateY(0);
+}
