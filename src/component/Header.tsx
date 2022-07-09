@@ -18,7 +18,7 @@ const Header: React.FC = () => {
         <nav className="header__inner container">
           <div className="header__logo">
             <Link to="/">
-              <img width={100} src={Logo} alt="logo" />
+              <img width={125} src={Logo} alt="logo" />
             </Link>
           </div>
           <ul className={`header__lists ${open ? "trans" : ""}`}>

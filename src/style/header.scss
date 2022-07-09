@@ -145,6 +145,17 @@
 
     opacity: 0.87;
   }
+  &__btn-plus {
+    margin-top: 7px;
+    background-color: $yellow;
+    font-weight: 500;
+  color: $dark;
+  font-size: 1.3rem;
+  padding: 16px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  }
   &__description {
     font-style: normal;
     font-weight: 400;

@@ -1,4 +1,5 @@
 import React from "react";
+import { HashLink } from "react-router-hash-link";
 import "../style/header.scss";
 
 const Main: React.FC = () => {
@@ -14,7 +15,7 @@ const Main: React.FC = () => {
               je suis infirmière , tatoueuse reconvertie. en plus de tatouages
               personnalisés , je propose une experience,
             </p>
-            <button className="hero__btn">View More</button>
+            <HashLink to="#contact" className="hero__btn-plus">Savoir plus</HashLink>
             <div className="hero__information">
               <article className="subinfo">
                 <h5 className="subinfo__title">Horaires d'ouverture</h5>

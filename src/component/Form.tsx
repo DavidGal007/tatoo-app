@@ -7,13 +7,15 @@ import emailjs from '@emailjs/browser';
 const Form: React.FC = () => {
 
   const form = React.useRef<null | HTMLFormElement>(null);
-
+  const SendMenssage = () => {
+    window.open('https://wa.me/message/6YGA5NBXIFTAM1', '_blank');
+  }
   const sendEmail = (e: any) => {
     e.preventDefault();
 
     emailjs.sendForm('service_4gwmwxy', 'template_r99qscn', e.currentTarget, 'gKXrgqEb0kGm6Fxq9')
       .then((result) => {
-         if(result.status == 200) {
+         if(result.status === 200) {
           alert('Merci pour votre demande!')
          }
       }, (error) => {
@@ -98,7 +100,7 @@ const Form: React.FC = () => {
       </div>
       <div className="wp-wrapper">
         <figure className="wp-content">
-          <Link to="/">
+          <Link onClick={SendMenssage} to="#">
             <img width={55} src={Icon} alt="icons" />
           </Link>
         </figure>
