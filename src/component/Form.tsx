@@ -2,8 +2,26 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../style/form.scss";
 import Icon from "../assets/whats.svg";
+import emailjs from '@emailjs/browser';
 
 const Form: React.FC = () => {
+
+  const form = React.useRef<null | HTMLFormElement>(null);
+
+  const sendEmail = (e: any) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_4gwmwxy', 'template_r99qscn', e.currentTarget, 'gKXrgqEb0kGm6Fxq9')
+      .then((result) => {
+         if(result.status == 200) {
+          alert('Merci pour votre demande!')
+         }
+      }, (error) => {
+          console.log(error.text);
+      });
+      e.currentTarget.reset();
+  };
+  
   return (
     <section id="contact" className="form">
       <div className="form__wrapper container">
@@ -44,13 +62,14 @@ const Form: React.FC = () => {
               </p>
             </div>
 
-            <form action="" className="form__block">
+            <form ref={form} onSubmit={sendEmail} className="form__block">
               <div className="form-item">
                 <label htmlFor="">Name</label>
                 <input
                   className="form-textfield"
                   type="text"
                   placeholder="Jhon Doe"
+                  name="name"
                 />
               </div>
               <div className="form-item">
@@ -59,6 +78,7 @@ const Form: React.FC = () => {
                   className="form-textfield"
                   type="text"
                   placeholder="jhon@email.com"
+                  name="email"
                 />
               </div>
               <div className="form-item">
@@ -66,6 +86,7 @@ const Form: React.FC = () => {
                 <textarea
                   className="form-textfield"
                   placeholder="Enter your message here..."
+                  name="message"
                 ></textarea>
               </div>
               <button className="form-btn" type="submit">

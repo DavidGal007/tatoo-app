@@ -19,13 +19,13 @@ const Main: React.FC = () => {
               <article className="subinfo">
                 <h5 className="subinfo__title">Horaires d'ouverture</h5>
                 <span className="subinfo__pfs">
-                  Du lundi au samedi | 10:00 AM to 20:00 PM
+                  Du lundi au vendredi | 12h a 17h30. possibilité de rdv tout les jours entre 8h et 20h
                 </span>
               </article>
               <article className="subinfo">
                 <h5 className="subinfo__title">Location</h5>
                 <span className="subinfo__pfs">
-                  50 rue Gerville Reache, Trois-Rivières 97114, GUADELOUPE
+                  50 rue Gerville Reache, Trois-Rivières 97114, Et Guadeloupe
                 </span>
               </article>
             </div>

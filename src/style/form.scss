@@ -3,10 +3,13 @@
    height: auto;
    margin-top: 90px;
    margin-bottom: 2em;
+   &__inner {
+    border: 2px solid gray;
+   }
     &__about-us {
         display: flex;
         column-gap: 25px;
-        align-items: center;
+        align-items: stretch;
         @media(max-width: $md2+px) {
             display: block;
         }

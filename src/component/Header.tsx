@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../style/header.scss";
 import Logo from "../logo.svg";
 import Insta from "../assets/insta.svg";
@@ -8,7 +8,7 @@ import { HashLink } from "react-router-hash-link";
 
 const Header: React.FC = () => {
   const [open, setOpen] = React.useState(false);
-
+  const navigate = useNavigate();
   const ToggleIcon = (): void => {
     setOpen(!open);
   };
@@ -53,19 +53,29 @@ const Header: React.FC = () => {
               <Link to="tel:0690-931-814" className="contact__tel">
                 0690-931-814
               </Link>
-              <Link to="/">
+              <div
+                onClick={() =>
+                  window.open("https://www.instagram.com/LADYNUMEN/", "_blank")
+                }
+                style={{ cursor: "pointer" }}
+              >
                 <img className="contact__insta" src={Insta} alt="Instagram" />
-              </Link>
-              <Link
-                target="_blank"
-                to="https://www.facebook.com/LadyNumen/about/?ref=page_internal"
+              </div>
+              <div
+                onClick={() =>
+                  window.open(
+                    "https://www.facebook.com/LadyNumen/about/?ref=page_internal",
+                    "_blank"
+                  )
+                }
+                style={{ cursor: "pointer" }}
               >
                 <img
                   className="contact__facebook"
                   src={Facebook}
                   alt="Facebook"
                 />
-              </Link>
+              </div>
             </div>
           </div>
           <div onClick={ToggleIcon} className="header__menu">
