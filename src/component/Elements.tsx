@@ -25,7 +25,7 @@ const Elements: React.FC = () => {
             
           </div>
           <div className="elements__cont elem">
-            <h4 className="elem__title">Lady numen est à votre ecoute Dans tous vos projets personnalisés.</h4>
+            <h4 className="elem__title"><b className="font-base">Lady numen</b> est à votre écoute Dans tous vos projets personnalisés.</h4>
             <p className="elem__phar">
               "Dans l'obscurité, j'avance au clair de ma plume"... Ces quelques
               mots de Grand Corps Malade pourrait résumer l'univers de Lady

@@ -35,10 +35,10 @@
       margin-right: 0;
     }
     @media (max-width: $md2+px) {
-       margin: 0 !important;
-       padding: 1em 0;
-       border-top: 1px solid gray;
-       text-align: center;
+      margin: 0 !important;
+      padding: 1em 0;
+      border-top: 1px solid gray;
+      text-align: center;
     }
   }
   &__link {
@@ -53,7 +53,7 @@
     @media (max-width: $md2+px) {
       font-size: 1.3rem;
       color: #f5f5f7;
-      opacity: .8;
+      opacity: 0.8;
       &:hover {
         color: #fff;
         text-decoration: none;
@@ -79,7 +79,7 @@
     font-weight: 500;
     padding-left: 30px;
     position: relative;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     &::after {
       content: "";
       position: absolute;
@@ -124,8 +124,8 @@
   }
   &__content {
     margin-left: 3em;
-    background-color: #ffffff2f;
-    flex: 0 1 50%;
+    background-color: #2222228f;
+    flex: 0 1 60%;
     @include adaptive-value("padding", 48, 32, 16);
     @media (max-width: $md2+px) {
       flex: 0 1 75%;
@@ -149,12 +149,11 @@
     margin-top: 7px;
     background-color: $yellow;
     font-weight: 500;
-  color: $dark;
-  font-size: 1.3rem;
-  padding: 16px 25px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
+    color: $dark;
+    font-size: 1.3rem;
+    padding: 16px 25px;
+    text-align: center;
+    display: inline-block;
   }
   &__description {
     font-style: normal;

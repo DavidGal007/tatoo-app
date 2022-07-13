@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../style/header.scss";
 import Logo from "../logo.svg";
 import Insta from "../assets/insta.svg";
@@ -8,7 +8,6 @@ import { HashLink } from "react-router-hash-link";
 
 const Header: React.FC = () => {
   const [open, setOpen] = React.useState(false);
-  const navigate = useNavigate();
   const ToggleIcon = (): void => {
     setOpen(!open);
   };
@@ -18,7 +17,7 @@ const Header: React.FC = () => {
         <nav className="header__inner container">
           <div className="header__logo">
             <Link to="/">
-              <img width={125} src={Logo} alt="logo" />
+              <img width={130} src={Logo} alt="logo" />
             </Link>
           </div>
           <ul className={`header__lists ${open ? "trans" : ""}`}>

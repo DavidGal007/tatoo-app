@@ -6,7 +6,7 @@ const Main: React.FC = () => {
   return (
     <section className="hero">
       <div className="hero__wrapper">
-        <div className="hero__inner">
+        <div className="hero__inner container">
           <div className="hero__content">
             <h1 className="hero__title">
               Osez franchir le pas. Rejoignez l'univers du tatouage.
