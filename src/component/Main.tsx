@@ -12,9 +12,9 @@ const Main: React.FC = () => {
               Osez franchir le pas. Rejoignez l'univers du tatouage.
             </h1>
             <p className="hero__description">
-              Lady Numen , Infirmiere tatoueuse, vous propose en plus d'un
-              tatouage entierement personnalisé, une experience, une
-              realisation de votre projet entierement guidée par l'amour de son
+              Lady Numen , infirmière tatoueuse, vous propose en plus d'un
+              tatouage entièrement personnalisé, une experience, une
+              réalisation de votre projet entièrement guidée par l'amour de son
               art et la maitrise de ses aiguilles.
             </p>
             <HashLink to="#contact" className="hero__btn-plus">
