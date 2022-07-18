@@ -1,4 +1,6 @@
 import React from 'react'
+import Art1 from '../assets/art1.jpeg'
+import Art2 from '../assets/art2.jpeg'
 
 const Services: React.FC = () => {
   return (
@@ -11,12 +13,12 @@ const Services: React.FC = () => {
                     <h3 className="services__psf font-base">Tatouages</h3>
                 </div>
                 <div className="services__article">
-                    <img className="services__image" src="https://images.unsplash.com/photo-1633443245758-6a507463c89c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="img" />
-                    <h3 className="services__psf font-base">Paint arts</h3>
+                    <img className="services__image" src={Art1} alt="img" />
+                    <h3 className="services__psf font-base">Croquis</h3>
                 </div>
                 <div className="services__article">
-                    <img className="services__image" src="https://images.unsplash.com/photo-1618513462042-29ac20aefe11?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80" alt="img" />
-                    <h3 className="services__psf font-base">Design</h3>
+                    <img className="services__image" src={Art2} alt="img" />
+                    <h3 className="services__psf font-base">Cover</h3>
                 </div>
             </div>
         </div>

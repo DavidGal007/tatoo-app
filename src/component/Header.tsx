@@ -7,7 +7,7 @@ import Facebook from "../assets/facebook.svg";
 import { HashLink } from "react-router-hash-link";
 
 const Header: React.FC = () => {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState<boolean>(false);
   const ToggleIcon = (): void => {
     setOpen(!open);
   };

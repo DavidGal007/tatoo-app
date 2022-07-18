@@ -9,6 +9,13 @@ import Image6 from "../assets/photo6.jpg";
 import Image7 from "../assets/photo7.jpeg";
 import Image8 from "../assets/photo8.jpeg";
 
+import Image9 from "../assets/photo9.jpg";
+import Image10 from "../assets/photo10.jpeg";
+import Image11 from "../assets/photo11.jpeg";
+import Image12 from "../assets/photo12.jpg";
+
+
+
 const Effect: React.FC = () => {
   return (
     <div>
@@ -39,16 +46,16 @@ const Effect: React.FC = () => {
             <img src={Image8} alt="gallery" />
           </div>
           <div className="gallery__item">
-            <img src={Image6} alt="gallery" />
+            <img src={Image9} alt="gallery" />
           </div>
           <div className="gallery__item">
-            <img src={Image7} alt="gallery" />
+            <img src={Image10} alt="gallery" />
           </div>
           <div className="gallery__item">
-            <img src={Image8} alt="gallery" />
+            <img src={Image11} alt="gallery" />
           </div>
           <div className="gallery__item">
-            <img src={Image5} alt="gallery" />
+            <img src={Image12} alt="gallery" />
           </div>
         </div>
       </div>

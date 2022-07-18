@@ -9,7 +9,7 @@ const Main: React.FC = () => {
         <div className="hero__inner container">
           <div className="hero__content">
             <h1 className="hero__title">
-              Osez franchir le pas. Rejoignez l'univers du tatouage.
+            Osez franchir le pas. Rejoignez l'univers du tatouage.
             </h1>
             <p className="hero__description">
               Lady Numen , infirmière tatoueuse, vous propose en plus d'un
