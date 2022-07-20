@@ -1,8 +1,24 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "../style/footer.scss";
 
+interface MalitoType {
+   email: string;
+   subject: string;
+   body: string;
+   children: string;
+}
+const Mailto: React.FC<MalitoType> = ({ email, subject, body, ...props }) => {
+  return (
+    <a className="footer-link" href={`mailto:${email}?subject=${subject || ""}&body=${body || ""}`}>
+      {props.children}
+    </a>
+  );
+}
+
 const Footer: React.FC = () => {
+  const openInNewTab = (url: string) => {
+    window.open(url, '_blank');
+  };
   let date = new Date();
   return (
     <footer className="footer">
@@ -10,17 +26,13 @@ const Footer: React.FC = () => {
         <div className="footer__inner">
           <div className="footer__items">
             <p className="footer__content">
-              Pour prendre rendez-vous, appelez-nous au 0690-931-814 ou
-              envoyez-nous un e-mail à l'adresse{" "}
-              <span>
-                <Link
-                  className="footer-link"
-                  to="mailto:contact@ladynumen.com"
-                  target="_blank"
-                >
-                  contact@ladynumen.com
-                </Link>
-              </span>
+              Pour prendre rendez-vous, <span className="link-soce" onClick={() => openInNewTab('https://www.facebook.com/LadyNumen/appointments')}>Pour prendre rdv sur Facebook</span>
+              {" "}envoyez-nous un e-mail à l'adresse{" "}
+              
+                <Mailto email="contact@ladynumen.com" subject="Bonjour" body="J'ai une question">
+                contact@ladynumen.com
+                </Mailto>
+              
             </p>
             <h6 className="footer__subtitle">
               Salon de tatouage : Lady Numen Tattoo, 50 Rue Gerville Reache

@@ -27,7 +27,7 @@ const Form: React.FC = () => {
   return (
     <section id="contact" className="form">
       <div className="form__wrapper container">
-        <h1 className="form__title">Contact</h1>
+      <h2 className="form__title services__title font-base">Contact</h2>
         <div className="form__inner">
           <div className="form__about-us">
             <div className="about">
@@ -41,17 +41,17 @@ const Form: React.FC = () => {
               </ul>
               <h4 className="about-title font-base">About Us</h4>
               <p className="about-desc">
-                Lady Numen Arts {"&"} Tattoo voit le jour en 2021. Fondé par
+                <p className="text">Lady Numen Arts {"&"} Tattoo voit le jour en 2021. Fondé par
                 Aline alias Numen, le salon Lady Numen Arts and Tattoo propose
-                ses services aux particuliers et aux entreprises . Notre
+                ses services aux particuliers et aux entreprises. Notre
                 objectif : vous permettre de vous sentir bien et d'exprimer
-                votre vérité. Nous sommes à votre écoute pour vous aider à
+                votre vérité.</p><p className="text"> Nous sommes à votre écoute pour vous aider à
                 concrétiser votre projet et à révéler votre beauté intérieure.
                 Nous utilisons exclusivement des produits de hautes qualités
                 (encres de normes européenne ) et les machines les plus
                 performants ( Dragon Fly, Scorpio). Formé par "La Dame de Pique"
                 à Echirolles (France), c'est plus de 13 ans d'expérience que
-                Lady Numen met à votre service. Amoureuse des voyages, c'est à
+                Lady Numen met à votre service. </p> Amoureuse des voyages, c'est à
                 travers de multiples rencontres, entre océan Atlantique et mers
                 des Caraïbes, que s'est façonné l'univers Lady Numen. En 2011,
                 elle pose ses valise en Guadeloupe et commence une découverte

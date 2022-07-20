@@ -29,9 +29,9 @@ const Main: React.FC = () => {
                 </span>
               </article>
               <article className="subinfo">
-                <h5 className="subinfo__title">Location</h5>
+                <h5 className="subinfo__title">Adresse</h5>
                 <span className="subinfo__pfs">
-                  50 rue Gerville Reache, Trois-Rivières 97114, Et Guadeloupe
+                  50 rue Gerville Reache, Trois-Rivières 97114, Guadeloupe
                 </span>
               </article>
             </div>

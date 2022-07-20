@@ -23,7 +23,7 @@ const Header: React.FC = () => {
           <ul className={`header__lists ${open ? "trans" : ""}`}>
             <li className="header__list">
               <Link to="/" className="header__link">
-                Home
+                Acceuil
               </Link>
             </li>
             <li className="header__list">
@@ -31,11 +31,7 @@ const Header: React.FC = () => {
                 Services
               </HashLink>
             </li>
-            <li className="header__list">
-              <Link to="/" className="header__link">
-                Shop
-              </Link>
-            </li>
+            
             <li className="header__list">
               <HashLink to="#galerie" smooth className="header__link">
                 Galerie photo

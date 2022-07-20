@@ -25,12 +25,13 @@ const Elements: React.FC = () => {
             
           </div>
           <div className="elements__cont elem">
-            <h4 className="elem__title"><b className="font-base">Lady numen</b> est à votre écoute Dans tous vos projets personnalisés.</h4>
+            <h4 className="elem__title"><b className="font-base">Lady numen</b> est à votre écoute dans tous vos projets personnalisés.</h4>
             <p className="elem__phar">
               "Dans l'obscurité, j'avance au clair de ma plume"... Ces quelques
               mots de Grand Corps Malade pourrait résumer l'univers de Lady
               Numen. Une sensibilité à fleur de peau alliée à une légèreté
               humoristique que l'on retrouve dans la douceur de son tracé.
+              <hr />
               Infirmière de profession, le dermographe est devenu la plume de sa
               liberté. Amoureuse des aiguilles, passionnée d'arts, elle
               retranscrit son amour de l'autre, le don de soi dans les traits de

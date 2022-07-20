@@ -23,3 +23,11 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}textarea{resize: none;
 .main {
     flex: 1 1 auto;
 }
+hr {
+    border: 0;
+    display: inline-block;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.477);
+    width: 96%;
+    margin: 5px 0;
+
+}
